@@ -23,15 +23,25 @@ class _OnBoardingState extends State<OnBoarding> {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: AppBar(
-          title: Center(child: new Text('App bar')),
+          title: new Text('الرئيسية',
+            style: TextStyle(
+                fontFamily: 'Montserrat',
+                fontSize: 20.0,
+                color: Colors.white
+            ),
+          ),
+          iconTheme: IconThemeData(
+            color: Colors.white, //change your color here
+          ),
+
           //
         ),
         drawer: new Drawer(
           child: ListView(
             children: <Widget>[
               new UserAccountsDrawerHeader(
-                accountName: Text('Tammara Tariq'),
-                accountEmail: Text('tammara.alhashimy90@gmail.com'),
+                accountName: Text('Leanne Graham'),
+                accountEmail: Text('07700000000'),
                 currentAccountPicture: CircleAvatar(
                   backgroundColor: Colors.redAccent,
                   child: Text('T'),
@@ -152,6 +162,19 @@ class _OnBoardingState extends State<OnBoarding> {
                     MaterialPageRoute(
                         builder: (context) => widgetKarDataGar())),
               ),
+
+        ListTile(
+          title: Text(
+            'خدمات تنجيد',
+            style: TextStyle(
+              fontSize: MediaQuery.of(context).size.width / 18,
+            ),
+          ),
+          onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => widgetKarDataUph())),
+        ),
 
               ListTile(
                 title: Text(
@@ -338,7 +361,17 @@ class _OnBoardingState extends State<OnBoarding> {
                 textDirection: TextDirection.rtl,
                 child: Scaffold(
                   appBar: new AppBar(
-                    title: new Center(child: new Text('خدمات الدهان')),
+                    title: new Text('خدمات الدهان',
+                     style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontSize: 20.0,
+                          color: Colors.white
+                      ),
+                    ),
+
+                    iconTheme: IconThemeData(
+                      color: Colors.white
+                    ),
                   ),
                   body: new ListView.builder(
                     padding: EdgeInsets.only(top:20.0),
@@ -480,8 +513,19 @@ class _OnBoardingState extends State<OnBoarding> {
                 textDirection: TextDirection.rtl,
                 child: Scaffold(
                   appBar: new AppBar(
-                    title: new Center(child: new Text('التنظيفات')),
-                  ),
+                    title:  new Text('التنظيفات',
+                      style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontSize: 20.0,
+                          color: Colors.white
+                      ),
+                    ),
+
+                      iconTheme: IconThemeData(
+                          color: Colors.white
+                      ),
+                    ),
+
                   body: new ListView.builder(
                     padding: EdgeInsets.only(top:20.0),
                     itemCount: content.length,
@@ -621,8 +665,19 @@ class _OnBoardingState extends State<OnBoarding> {
                 textDirection: TextDirection.rtl,
                 child: Scaffold(
                   appBar: new AppBar(
-                    title: new Center(child: new Text('خدمات كهربائية')),
-                  ),
+                    title:  new Text('خدمات كهربائية',
+                      style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontSize: 20.0,
+                          color: Colors.white
+                      ),
+                    ),
+
+                      iconTheme: IconThemeData(
+                          color: Colors.white
+                      ),
+                    ),
+
                   body: new ListView.builder(
                     padding: EdgeInsets.only(top:20.0),
                     itemCount: content.length,
@@ -765,8 +820,19 @@ class _OnBoardingState extends State<OnBoarding> {
                 textDirection: TextDirection.rtl,
                 child: Scaffold(
                   appBar: new AppBar(
-                    title: new Center(child: new Text('بناء مقاولات')),
-                  ),
+                    title:  new Text('بناء مقاولات',
+                      style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontSize: 20.0,
+                          color: Colors.white
+                      ),
+                    ),
+
+                      iconTheme: IconThemeData(
+                          color: Colors.white
+                      ),
+                    ),
+
                   body: new ListView.builder(
                     padding: EdgeInsets.only(top:20.0),
                     itemCount: content.length,
@@ -906,8 +972,19 @@ class _OnBoardingState extends State<OnBoarding> {
                 textDirection: TextDirection.rtl,
                 child: Scaffold(
                   appBar: new AppBar(
-                    title: new Center(child: new Text('التكييف والتبريد')),
-                  ),
+                    title: new Text('التكييف والتبريد',
+                      style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontSize: 20.0,
+                          color: Colors.white
+                      ),
+                    ),
+
+                      iconTheme: IconThemeData(
+                          color: Colors.white
+                      ),
+                    ),
+
                   body: new ListView.builder(
                     padding: EdgeInsets.only(top:20.0),
                     itemCount: content.length,
@@ -1047,8 +1124,18 @@ class _OnBoardingState extends State<OnBoarding> {
                 textDirection: TextDirection.rtl,
                 child: Scaffold(
                   appBar: new AppBar(
-                    title: new Center(child: new Text('ابواب - شبابيك')),
-                  ),
+                    title: new Text('ابواب - شبابيك',
+                      style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontSize: 20.0,
+                          color: Colors.white
+                      ),
+                    ),
+
+                      iconTheme: IconThemeData(
+                          color: Colors.white
+                      ),),
+
                   body: new ListView.builder(
                     padding: EdgeInsets.only(top:20.0),
                     itemCount: content.length,
@@ -1189,8 +1276,19 @@ class _OnBoardingState extends State<OnBoarding> {
                 textDirection: TextDirection.rtl,
                 child: Scaffold(
                   appBar: new AppBar(
-                    title: new Center(child: new Text('صيانة سيارات')),
-                  ),
+                    title:  new Text('صيانة سيارات',
+                      style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontSize: 20.0,
+                          color: Colors.white
+                      ),
+                    ),
+
+                      iconTheme: IconThemeData(
+                          color: Colors.white
+                      ),
+                    ),
+
                   body: new ListView.builder(
                     padding: EdgeInsets.only(top:20.0),
                     itemCount: content.length,
@@ -1330,8 +1428,19 @@ class _OnBoardingState extends State<OnBoarding> {
                 textDirection: TextDirection.rtl,
                 child: Scaffold(
                   appBar: new AppBar(
-                    title: new Center(child: new Text('خدمات نجارة')),
-                  ),
+                    title:  Text('خدمات نجارة',
+                      style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontSize: 20.0,
+                          color: Colors.white
+                      ),
+                    ),
+
+                      iconTheme: IconThemeData(
+                          color: Colors.white
+                      ),
+                    ),
+
                   body: new ListView.builder(
                     padding: EdgeInsets.only(top:20.0),
                     itemCount: content.length,
@@ -1471,8 +1580,19 @@ class _OnBoardingState extends State<OnBoarding> {
                 textDirection: TextDirection.rtl,
                 child: Scaffold(
                   appBar: new AppBar(
-                    title: new Center(child: new Text('خدمات حدائق')),
-                  ),
+                    title:  new Text('خدمات حدائق',
+                      style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontSize: 20.0,
+                          color: Colors.white
+                      ),
+                    ),
+
+                      iconTheme: IconThemeData(
+                          color: Colors.white
+                      ),
+                    ),
+
                   body: new ListView.builder(
                     padding: EdgeInsets.only(top:20.0),
                     itemCount: content.length,
@@ -1613,8 +1733,19 @@ class _OnBoardingState extends State<OnBoarding> {
                 textDirection: TextDirection.rtl,
                 child: Scaffold(
                   appBar: new AppBar(
-                    title: new Center(child: new Text('خدمات تنجيد')),
-                  ),
+                    title: new Text('خدمات تنجيد',
+                      style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontSize: 20.0,
+                          color: Colors.white
+                      ),
+                    ),
+
+                      iconTheme: IconThemeData(
+                          color: Colors.white
+                      ),
+                    ),
+
                   body: new ListView.builder(
                     padding: EdgeInsets.only(top:20.0),
                     itemCount: content.length,
@@ -1756,8 +1887,20 @@ class _OnBoardingState extends State<OnBoarding> {
                 textDirection: TextDirection.rtl,
                 child: Scaffold(
                   appBar: new AppBar(
-                    title: new Center(child: new Text('خدمات لحام')),
+                    title:  new Text('خدمات لحام',
+                        style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontSize: 20.0,
+                        color: Colors.white
+                    ),
+                    ),
+
+                    iconTheme: IconThemeData(
+                        color: Colors.white
+                    ),
                   ),
+
+
                   body: new ListView.builder(
                     padding: EdgeInsets.only(top:20.0),
                     itemCount: content.length,
@@ -1896,8 +2039,20 @@ class _OnBoardingState extends State<OnBoarding> {
                 textDirection: TextDirection.rtl,
                 child: Scaffold(
                   appBar: new AppBar(
-                    title: new Center(child: new Text('خدمات نقل')),
+                    title: new Text('خدمات نقل',
+                        style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontSize: 20.0,
+                        color: Colors.white
+                    ),
+                    ),
+
+                    iconTheme: IconThemeData(
+                        color: Colors.white
+                    ),
                   ),
+
+
                   body: new ListView.builder(
                     padding: EdgeInsets.only(top:20.0),
                     itemCount: content.length,
@@ -2037,8 +2192,20 @@ class _OnBoardingState extends State<OnBoarding> {
                 textDirection: TextDirection.rtl,
                 child: Scaffold(
                   appBar: new AppBar(
-                    title: new Center(child: new Text('الطعام')),
-                  ),
+                    title:  new Text('الطعام',
+                      style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontSize: 20.0,
+                          color: Colors.white
+                      ),
+                    ),
+
+                      iconTheme: IconThemeData(
+                          color: Colors.white
+                      ),
+                    ),
+
+
                   body: new ListView.builder(
                     padding: EdgeInsets.only(top:20.0),
                     itemCount: content.length,
@@ -2180,8 +2347,19 @@ class _OnBoardingState extends State<OnBoarding> {
                 textDirection: TextDirection.rtl,
                 child: Scaffold(
                   appBar: new AppBar(
-                    title: new Center(child: new Text('كاميرات مراقبة')),
-                  ),
+                    title:  Text('كاميرات مراقبة',
+                      style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontSize: 20.0,
+                          color: Colors.white
+                      ),
+                    ),
+
+                      iconTheme: IconThemeData(
+                          color: Colors.white
+                      ),
+                    ),
+
                   body: new ListView.builder(
                     padding: EdgeInsets.only(top:20.0),
                     itemCount: content.length,

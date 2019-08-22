@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -33,6 +34,22 @@ class RegisterPageState extends State<RegisterPage> {
               OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
       keyboardType: TextInputType.phone,
     );
+    final signUpButom = Material(
+      elevation: 5.0,
+      borderRadius: BorderRadius.circular(30.0),
+      color: Colors.blue[400],
+      child: MaterialButton(
+        minWidth: MediaQuery.of(context).size.width,
+        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        onPressed: ()  {},
+        child: Text("إنشاء حساب جديد",
+            textAlign: TextAlign.center,
+            style: style.copyWith(
+                color: Colors.white, fontWeight: FontWeight.bold)),
+      ),
+    );
+
+
 
     final addressField = TextField(
       obscureText: false,
@@ -45,6 +62,7 @@ class RegisterPageState extends State<RegisterPage> {
     );
 
     final List<String> dropValueList = [
+      "",
       "خدمات الدهان",
       "التنظيفات",
       "خدمات كهربائية",
@@ -59,7 +77,7 @@ class RegisterPageState extends State<RegisterPage> {
       "الطعام",
       "كاميرات مراقبة"
     ];
-    String dropValue = "خدمات الدهان";
+    String dropValue = "";
     void _newItemSelected(String newValueSelected) {
       setState(() {
         dropValue = newValueSelected;
@@ -67,23 +85,43 @@ class RegisterPageState extends State<RegisterPage> {
     }
 
     final dropDownKar = DropdownButton<String>(
-      items: dropValueList.map((String dropDownItemsKar) {
-        return DropdownMenuItem<String>(
-          value: dropDownItemsKar,
-          child: Text(dropDownItemsKar),
-        );
-      }).toList(),
-      hint: Text("إختر خدمة"),
+      value: dropValue,
       onChanged: (String newValueSelected) {
         _newItemSelected(newValueSelected);
       },
-      value: dropValue,
+      items: dropValueList.map((String dropDownItemsKar) {
+        return DropdownMenuItem<String>(
+          value: dropDownItemsKar,
+          child: Text(dropDownItemsKar,
+          style: style,),
+        );
+      }).toList(),
+        isExpanded: true,
+        iconSize: 35,
+      elevation: 0,
+      underline:Text('إختر حرفة',
+      style: style,),
     );
 
     // TODO: implement build
     return Directionality(
       textDirection: TextDirection.rtl,
       child: new Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          title:Text("إضافة حرفي",
+          style: TextStyle(
+              fontFamily: 'Montserrat',
+              fontSize: 20.0,
+            color: Colors.white
+          ),
+          ),
+          iconTheme: IconThemeData(
+            color: Colors.white, //change your color here
+          ),
+        ),
+
+
         body: ListView(
           children: <Widget>[
             new Center(
@@ -106,6 +144,7 @@ class RegisterPageState extends State<RegisterPage> {
                         width: double.infinity,
                         height: MediaQuery.of(context).size.width / 17),
                     nameField,
+
                     SizedBox(
                         width: double.infinity,
                         height: MediaQuery.of(context).size.width / 17),
@@ -114,15 +153,25 @@ class RegisterPageState extends State<RegisterPage> {
                         width: double.infinity,
                         height: MediaQuery.of(context).size.width / 17),
                     addressField,
-                    SizedBox(width: double.infinity, height: 17),
-                    Container(
-                        width: MediaQuery.of(context).size.width / 1,
-                        height: MediaQuery.of(context).size.width / 12,
-                        child: dropDownKar),
                     SizedBox(
-                      height: 15.0,
-                      width: 150.0,
+                        width: double.infinity,
+                        height: MediaQuery.of(context).size.width / 17),
+
+                    Container(
+
+                      padding: EdgeInsets.only(left: 25.0,right: 25.0),
+                        child: SizedBox(
+                            width: double.infinity,
+                            height: MediaQuery.of(context).size.width / 10,
+                            child: dropDownKar,
+                        ),
+
+                       ),
+                    SizedBox(
+                      width: double.infinity,
+                      height: MediaQuery.of(context).size.width / 17,
                     ),
+                    signUpButom,
                   ],
                 ),
               ),

@@ -78,13 +78,15 @@ class LoginPageState extends State<LoginPage>{
         backgroundColor: Colors.white,
 
         appBar: AppBar(
-          title: new Center(
-            child: new Text('',
+          title: new Text('تسجيل الدخول',
             style: TextStyle(
-                fontSize: MediaQuery.of(context).size.width /18,
-              color: Colors.deepPurple
+                fontFamily: 'Montserrat',
+                fontSize: 20.0,
+                color: Colors.white
             ),
             ),
+          iconTheme: IconThemeData(
+            color: Colors.white, //change your color here
           ),
           backgroundColor: Colors.blue[400],
           elevation: 0,
