@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:async';
+import 'package:newappkar/GUI/Home.dart';
 
 class OnBoarding extends StatefulWidget {
   @override
@@ -16,12 +17,259 @@ class OnBoarding extends StatefulWidget {
 
 class _OnBoardingState extends State<OnBoarding> {
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
+
+
+
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
+          drawer: new Drawer(
+            child: ListView(
+              children: <Widget>[
+                new UserAccountsDrawerHeader(
+                  accountName: Text('Leanne Graham'),
+                  accountEmail: Text('07700000000'),
+                  currentAccountPicture: CircleAvatar(
+                    backgroundColor: Colors.redAccent,
+                    child: Text('T'),
+                  ),
+                ),
+                ListTile(
+                  title: Text(
+                    'خدمات الدهان',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width / 18,
+                    ),
+                  ),
+                  onTap: () => Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => widgetKarData())),
+                ),
+                ListTile(
+                  title: Text(
+                    'التنظيفات',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width / 18,
+                    ),
+                  ),
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => widgetKarDataClean())),
+                ),
+
+                ListTile(
+                  title: Text(
+                    'خدمات كهربائية',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width / 18,
+                    ),
+                  ),
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => widgetKarDataElect())),
+                ),
+
+                ListTile(
+                  title: Text(
+                    'بناء مقاولات',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width / 18,
+                    ),
+                  ),
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => widgetKarDataBuild())),
+                ),
+
+                ListTile(
+                  title: Text(
+                    'التكييف والتبريد',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width / 18,
+                    ),
+                  ),
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => widgetKarDataAir())),
+                ),
+
+
+                ListTile(
+                  title: Text(
+                    'ابواب - شبابيك',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width / 18,
+                    ),
+                  ),
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => widgetKarDataBoor())),
+                ),
+
+
+                ListTile(
+                  title: Text(
+                    'صيانة سيارات',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width / 18,
+                    ),
+                  ),
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => widgetKarDataCar())),
+                ),
+
+                ListTile(
+                  title: Text(
+                    'خدمات نجارة',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width / 18,
+                    ),
+                  ),
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => widgetKarDataCarp())),
+                ),
+
+                ListTile(
+                  title: Text(
+                    'خدمات حدائق',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width / 18,
+                    ),
+                  ),
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => widgetKarDataGar())),
+                ),
+
+                ListTile(
+                  title: Text(
+                    'خدمات تنجيد',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width / 18,
+                    ),
+                  ),
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => widgetKarDataUph())),
+                ),
+
+                ListTile(
+                  title: Text(
+                    'خدمات لحام',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width / 18,
+                    ),
+                  ),
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => widgetKarDataWeld())),
+                ),
+
+                ListTile(
+                  title: Text(
+                    'خدمات نقل',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width / 18,
+                    ),
+                  ),
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => widgetKarDataTrans())),
+                ),
+
+                ListTile(
+                  title: Text(
+                    'الطعام',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width / 18,
+                    ),
+                  ),
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => widgetKarDataFood())),
+                ),
+
+                ListTile(
+                  title: Text(
+                    'كاميرات مراقبة',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width / 18,
+                    ),
+                  ),
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => widgetKarDataCam())),
+                ),
+
+                Divider(
+                  height: 10,
+                  color: Colors.deepPurple,
+                ),
+                ListTile(
+                  title: Text(
+                    'حول التطبيق',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width / 18,
+                    ),
+                  ),
+                  trailing: Icon(Icons.info_outline),
+                  onTap: () => debugPrint('About!'),
+                ),
+
+
+                Divider(
+                  height: 10,
+                  color: Colors.deepPurple,
+                ),
+                ListTile(
+                  title: Text(
+                    'اللغة',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width / 18,
+                    ),
+                  ),
+                  trailing: Icon(Icons.language),
+                  onTap: () => debugPrint('Language!'),
+                ),
+
+
+                Divider(
+                  height: 10,
+                  color: Colors.deepPurple,
+                ),
+                ListTile(
+                  title: Text(
+                    'إغلاق',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width / 18,
+                    ),
+                  ),
+                  trailing: Icon(Icons.close),
+                  onTap: () => Navigator.of(context).pop(),
+                ),
+
+
+              ],
+            ),
+          ),
         appBar: AppBar(
           title: new Text('الرئيسية',
             style: TextStyle(
@@ -36,307 +284,8 @@ class _OnBoardingState extends State<OnBoarding> {
 
           //
         ),
-        drawer: new Drawer(
-          child: ListView(
-            children: <Widget>[
-              new UserAccountsDrawerHeader(
-                accountName: Text('Leanne Graham'),
-                accountEmail: Text('07700000000'),
-                currentAccountPicture: CircleAvatar(
-                  backgroundColor: Colors.redAccent,
-                  child: Text('T'),
-                ),
-              ),
-              ListTile(
-                title: Text(
-                  'خدمات الدهان',
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width / 18,
-                  ),
-                ),
-                onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => widgetKarData())),
-              ),
-              ListTile(
-                title: Text(
-                  'التنظيفات',
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width / 18,
-                  ),
-                ),
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => widgetKarDataClean())),
-              ),
 
-              ListTile(
-                title: Text(
-                  'خدمات كهربائية',
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width / 18,
-                  ),
-                ),
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => widgetKarDataElect())),
-              ),
-
-              ListTile(
-                title: Text(
-                  'بناء مقاولات',
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width / 18,
-                  ),
-                ),
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => widgetKarDataBuild())),
-              ),
-
-              ListTile(
-                title: Text(
-                  'التكييف والتبريد',
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width / 18,
-                  ),
-                ),
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => widgetKarDataAir())),
-              ),
-
-
-              ListTile(
-                title: Text(
-                  'ابواب - شبابيك',
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width / 18,
-                  ),
-                ),
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => widgetKarDataBoor())),
-              ),
-
-
-              ListTile(
-                title: Text(
-                  'صيانة سيارات',
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width / 18,
-                  ),
-                ),
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => widgetKarDataCar())),
-              ),
-
-              ListTile(
-                title: Text(
-                  'خدمات نجارة',
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width / 18,
-                  ),
-                ),
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => widgetKarDataCarp())),
-              ),
-
-              ListTile(
-                title: Text(
-                  'خدمات حدائق',
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width / 18,
-                  ),
-                ),
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => widgetKarDataGar())),
-              ),
-
-        ListTile(
-          title: Text(
-            'خدمات تنجيد',
-            style: TextStyle(
-              fontSize: MediaQuery.of(context).size.width / 18,
-            ),
-          ),
-          onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => widgetKarDataUph())),
-        ),
-
-              ListTile(
-                title: Text(
-                  'خدمات لحام',
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width / 18,
-                  ),
-                ),
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => widgetKarDataWeld())),
-              ),
-
-              ListTile(
-                title: Text(
-                  'خدمات نقل',
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width / 18,
-                  ),
-                ),
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => widgetKarDataTrans())),
-              ),
-
-              ListTile(
-                title: Text(
-                  'الطعام',
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width / 18,
-                  ),
-                ),
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => widgetKarDataFood())),
-              ),
-
-              ListTile(
-                title: Text(
-                  'كاميرات مراقبة',
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width / 18,
-                  ),
-                ),
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => widgetKarDataCam())),
-              ),
-
-              Divider(
-                height: 10,
-                color: Colors.deepPurple,
-              ),
-              ListTile(
-                title: Text(
-                  'حول التطبيق',
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width / 18,
-                  ),
-                ),
-                trailing: Icon(Icons.info_outline),
-                onTap: () => debugPrint('About!'),
-              ),
-
-
-              Divider(
-                height: 10,
-                color: Colors.deepPurple,
-              ),
-              ListTile(
-                title: Text(
-                  'اللغة',
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width / 18,
-                  ),
-                ),
-                trailing: Icon(Icons.language),
-                onTap: () => debugPrint('Language!'),
-              ),
-
-
-              Divider(
-                height: 10,
-                color: Colors.deepPurple,
-              ),
-              ListTile(
-                title: Text(
-                  'إغلاق',
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width / 18,
-                  ),
-                ),
-                trailing: Icon(Icons.close),
-                onTap: () => Navigator.of(context).pop(),
-              ),
-
-
-            ],
-          ),
-        ),
-        body:new Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Padding(padding : EdgeInsets.only(top:MediaQuery.of(context).size.width / 4)),
-              new Icon(Icons.notifications_paused,
-              size: MediaQuery.of(context).size.width / 3,
-                ),
-              Padding(padding : EdgeInsets.only(top:MediaQuery.of(context).size.width / 11)),
-              Text('أهلاً وسهلاً ',
-              style: TextStyle(
-                fontSize: MediaQuery.of(context).size.width / 14,
-
-              ),
-              ),
-              Padding(padding : EdgeInsets.only(top:MediaQuery.of(context).size.width / 26,
-
-              )),
-              Text('مرحباً بك في تطبيق Kar يضم عدد من الايدي العاملة لكافة التخصصات في أربيل  ',
-                style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width / 20,
-                ),
-                textAlign: TextAlign.center,
-              ),
-
-
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Padding(
-                  padding:EdgeInsets.only(top: MediaQuery.of(context).size.width / 6,
-                      right:MediaQuery.of(context).size.width / 15,
-                  left:MediaQuery.of(context).size.width / 15,
-                  ),
-                  child: SizedBox(
-                    width: double.infinity,
-                    height: MediaQuery.of(context).size.width / 7,
-                    child: Material(
-                      elevation: 5.0,
-                      borderRadius: BorderRadius.circular(30.0),
-                      color: Colors.blue[400],
-                      child: MaterialButton(
-                        minWidth: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                        onPressed: () {Navigator.of(context).pushNamed('/LoginPage');},
-                        child: Text("إضافة حرفي",
-                            textAlign: TextAlign.center,
-                            style: style.copyWith(
-                                color: Colors.white, fontWeight: FontWeight.bold)),
-                      ),
-                    )
-                    //onPressed: () {Navigator.of(context).pushNamed('/LoginPage');}
-                  ),
-                ),
-              )
-
-            ],
-          ),
-        )
+       body:Home()
       ),
     );
   }
@@ -457,7 +406,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                           ),
                                         ),
                                         onPressed: () => debugPrint('callling'),
-                                        color: Colors.redAccent,
+                                        color: Colors.green,
 
                                       ),
                                     ),
@@ -482,12 +431,7 @@ class _OnBoardingState extends State<OnBoarding> {
             return new Directionality(
               textDirection: TextDirection.ltr,
               child: Scaffold(
-                body: new Center(
-                  child: new Text(
-                    'Loading ...',
-                    style: TextStyle(fontSize: 33.0),
-                  ),
-                ),
+                body: Center(child: CircularProgressIndicator()),
               ),
             );
           }
@@ -609,7 +553,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                           ),
                                         ),
                                         onPressed: () => debugPrint('callling'),
-                                        color: Colors.redAccent,
+                                        color: Colors.green,
 
                                       ),
                                     ),
@@ -634,12 +578,7 @@ class _OnBoardingState extends State<OnBoarding> {
             return new Directionality(
               textDirection: TextDirection.ltr,
               child: Scaffold(
-                body: new Center(
-                  child: new Text(
-                    'Loading ...',
-                    style: TextStyle(fontSize: 33.0),
-                  ),
-                ),
+                body: Center(child: CircularProgressIndicator()),
               ),
             );
           }
@@ -761,7 +700,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                           ),
                                         ),
                                         onPressed: () => debugPrint('callling'),
-                                        color: Colors.redAccent,
+                                        color: Colors.green,
 
                                       ),
                                     ),
@@ -786,12 +725,7 @@ class _OnBoardingState extends State<OnBoarding> {
             return new Directionality(
               textDirection: TextDirection.ltr,
               child: Scaffold(
-                body: new Center(
-                  child: new Text(
-                    'Loading ...',
-                    style: TextStyle(fontSize: 33.0),
-                  ),
-                ),
+                body: Center(child: CircularProgressIndicator()),
               ),
             );
           }
@@ -916,7 +850,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                           ),
                                         ),
                                         onPressed: () => debugPrint('callling'),
-                                        color: Colors.redAccent,
+                                        color: Colors.green,
 
                                       ),
                                     ),
@@ -941,12 +875,7 @@ class _OnBoardingState extends State<OnBoarding> {
             return new Directionality(
               textDirection: TextDirection.ltr,
               child: Scaffold(
-                body: new Center(
-                  child: new Text(
-                    'Loading ...',
-                    style: TextStyle(fontSize: 33.0),
-                  ),
-                ),
+                body: Center(child: CircularProgressIndicator()),
               ),
             );
           }
@@ -1068,7 +997,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                           ),
                                         ),
                                         onPressed: () => debugPrint('callling'),
-                                        color: Colors.redAccent,
+                                        color: Colors.green,
 
                                       ),
                                     ),
@@ -1093,12 +1022,7 @@ class _OnBoardingState extends State<OnBoarding> {
             return new Directionality(
               textDirection: TextDirection.ltr,
               child: Scaffold(
-                body: new Center(
-                  child: new Text(
-                    'Loading ...',
-                    style: TextStyle(fontSize: 33.0),
-                  ),
-                ),
+                body: Center(child: CircularProgressIndicator()),
               ),
             );
           }
@@ -1219,7 +1143,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                           ),
                                         ),
                                         onPressed: () => debugPrint('callling'),
-                                        color: Colors.redAccent,
+                                        color: Colors.green,
 
                                       ),
                                     ),
@@ -1244,12 +1168,7 @@ class _OnBoardingState extends State<OnBoarding> {
             return new Directionality(
               textDirection: TextDirection.ltr,
               child: Scaffold(
-                body: new Center(
-                  child: new Text(
-                    'Loading ...',
-                    style: TextStyle(fontSize: 33.0),
-                  ),
-                ),
+                body: Center(child: CircularProgressIndicator()),
               ),
             );
           }
@@ -1372,7 +1291,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                           ),
                                         ),
                                         onPressed: () => debugPrint('callling'),
-                                        color: Colors.redAccent,
+                                        color: Colors.green,
 
                                       ),
                                     ),
@@ -1397,12 +1316,7 @@ class _OnBoardingState extends State<OnBoarding> {
             return new Directionality(
               textDirection: TextDirection.ltr,
               child: Scaffold(
-                body: new Center(
-                  child: new Text(
-                    'Loading ...',
-                    style: TextStyle(fontSize: 33.0),
-                  ),
-                ),
+                body: Center(child: CircularProgressIndicator()),
               ),
             );
           }
@@ -1524,7 +1438,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                           ),
                                         ),
                                         onPressed: () => debugPrint('callling'),
-                                        color: Colors.redAccent,
+                                        color: Colors.green,
 
                                       ),
                                     ),
@@ -1549,12 +1463,7 @@ class _OnBoardingState extends State<OnBoarding> {
             return new Directionality(
               textDirection: TextDirection.ltr,
               child: Scaffold(
-                body: new Center(
-                  child: new Text(
-                    'Loading ...',
-                    style: TextStyle(fontSize: 33.0),
-                  ),
-                ),
+                body: Center(child: CircularProgressIndicator()),
               ),
             );
           }
@@ -1676,7 +1585,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                           ),
                                         ),
                                         onPressed: () => debugPrint('callling'),
-                                        color: Colors.redAccent,
+                                        color: Colors.green,
 
                                       ),
                                     ),
@@ -1697,16 +1606,11 @@ class _OnBoardingState extends State<OnBoarding> {
                     },
                   ),
                 ));
-          } else {
+          }else {
             return new Directionality(
               textDirection: TextDirection.ltr,
               child: Scaffold(
-                body: new Center(
-                  child: new Text(
-                    'Loading ...',
-                    style: TextStyle(fontSize: 33.0),
-                  ),
-                ),
+                body: Center(child: CircularProgressIndicator()),
               ),
             );
           }
@@ -1829,7 +1733,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                           ),
                                         ),
                                         onPressed: () => debugPrint('callling'),
-                                        color: Colors.redAccent,
+                                        color: Colors.green,
 
                                       ),
                                     ),
@@ -1850,16 +1754,11 @@ class _OnBoardingState extends State<OnBoarding> {
                     },
                   ),
                 ));
-          } else {
+          }else {
             return new Directionality(
               textDirection: TextDirection.ltr,
               child: Scaffold(
-                body: new Center(
-                  child: new Text(
-                    'Loading ...',
-                    style: TextStyle(fontSize: 33.0),
-                  ),
-                ),
+                body: Center(child: CircularProgressIndicator()),
               ),
             );
           }
@@ -1984,7 +1883,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                           ),
                                         ),
                                         onPressed: () => debugPrint('callling'),
-                                        color: Colors.redAccent,
+                                        color: Colors.green,
 
                                       ),
                                     ),
@@ -2009,12 +1908,7 @@ class _OnBoardingState extends State<OnBoarding> {
             return new Directionality(
               textDirection: TextDirection.ltr,
               child: Scaffold(
-                body: new Center(
-                  child: new Text(
-                    'Loading ...',
-                    style: TextStyle(fontSize: 33.0),
-                  ),
-                ),
+                body: Center(child: CircularProgressIndicator()),
               ),
             );
           }
@@ -2136,7 +2030,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                           ),
                                         ),
                                         onPressed: () => debugPrint('callling'),
-                                        color: Colors.redAccent,
+                                        color: Colors.green,
 
                                       ),
                                     ),
@@ -2157,16 +2051,11 @@ class _OnBoardingState extends State<OnBoarding> {
                     },
                   ),
                 ));
-          } else {
+          }else {
             return new Directionality(
               textDirection: TextDirection.ltr,
               child: Scaffold(
-                body: new Center(
-                  child: new Text(
-                    'Loading ...',
-                    style: TextStyle(fontSize: 33.0),
-                  ),
-                ),
+                body: Center(child: CircularProgressIndicator()),
               ),
             );
           }
@@ -2289,7 +2178,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                           ),
                                         ),
                                         onPressed: () => debugPrint('callling'),
-                                        color: Colors.redAccent,
+                                        color: Colors.green,
 
                                       ),
                                     ),
@@ -2314,12 +2203,7 @@ class _OnBoardingState extends State<OnBoarding> {
             return new Directionality(
               textDirection: TextDirection.ltr,
               child: Scaffold(
-                body: new Center(
-                  child: new Text(
-                    'Loading ...',
-                    style: TextStyle(fontSize: 33.0),
-                  ),
-                ),
+                body: Center(child: CircularProgressIndicator()),
               ),
             );
           }
@@ -2443,7 +2327,7 @@ class _OnBoardingState extends State<OnBoarding> {
                                           ),
                                         ),
                                         onPressed: () => debugPrint('callling'),
-                                        color: Colors.redAccent,
+                                        color: Colors.green,
 
                                       ),
                                     ),
@@ -2468,12 +2352,7 @@ class _OnBoardingState extends State<OnBoarding> {
             return new Directionality(
               textDirection: TextDirection.ltr,
               child: Scaffold(
-                body: new Center(
-                  child: new Text(
-                    'Loading ...',
-                    style: TextStyle(fontSize: 33.0),
-                  ),
-                ),
+                body: Center(child: CircularProgressIndicator()),
               ),
             );
           }

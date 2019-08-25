@@ -56,7 +56,7 @@ class LoginPageState extends State<LoginPage>{
     final signUpButon = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
-      color: Colors.blue[400],
+      color: Colors.orange[600],
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),

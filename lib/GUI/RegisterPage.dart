@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
+
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -11,6 +12,28 @@ class RegisterPage extends StatefulWidget {
 
 class RegisterPageState extends State<RegisterPage> {
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
+  final List<String> dropValueList = [
+
+    "خدمات الدهان",
+    "التنظيفات",
+    "خدمات كهربائية",
+    "بناء مقاولات",
+    "التكييف والتبرييد",
+    "ابواب - شبابيك",
+    "صيانة سيارات",
+    "خدمات نجارة",
+    "خدمات حدائق",
+    "خدمات لحام",
+    "خدمات نقل",
+    "الطعام",
+    "كاميرات مراقبة"
+  ];
+  String dropValue = "خدمات الدهان";
+  void _newItemSelected(String newValueSelected) {
+    setState(() {
+      dropValue = newValueSelected;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     final nameField = TextField(
@@ -37,12 +60,12 @@ class RegisterPageState extends State<RegisterPage> {
     final signUpButom = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
-      color: Colors.blue[400],
+      color: Colors.orange[600],
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: ()  {},
-        child: Text("إنشاء حساب جديد",
+        child: Text("تسجيل",
             textAlign: TextAlign.center,
             style: style.copyWith(
                 color: Colors.white, fontWeight: FontWeight.bold)),
@@ -61,28 +84,7 @@ class RegisterPageState extends State<RegisterPage> {
               OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
 
-    final List<String> dropValueList = [
-      "",
-      "خدمات الدهان",
-      "التنظيفات",
-      "خدمات كهربائية",
-      "بناء مقاولات",
-      "التكييف والتبرييد",
-      "ابواب - شبابيك",
-      "صيانة سيارات",
-      "خدمات نجارة",
-      "خدمات حدائق",
-      "خدمات لحام",
-      "خدمات نقل",
-      "الطعام",
-      "كاميرات مراقبة"
-    ];
-    String dropValue = "";
-    void _newItemSelected(String newValueSelected) {
-      setState(() {
-        dropValue = newValueSelected;
-      });
-    }
+
 
     final dropDownKar = DropdownButton<String>(
       value: dropValue,
@@ -99,8 +101,7 @@ class RegisterPageState extends State<RegisterPage> {
         isExpanded: true,
         iconSize: 35,
       elevation: 0,
-      underline:Text('إختر حرفة',
-      style: style,),
+
     );
 
     // TODO: implement build
@@ -109,7 +110,7 @@ class RegisterPageState extends State<RegisterPage> {
       child: new Scaffold(
         appBar: AppBar(
           elevation: 0,
-          title:Text("إضافة حرفي",
+          title:Text("تسجيل",
           style: TextStyle(
               fontFamily: 'Montserrat',
               fontSize: 20.0,
