@@ -34,7 +34,7 @@ class _OnBoardingState extends State<OnBoarding> {
                   accountName: Text('Leanne Graham'),
                   accountEmail: Text('07700000000'),
                   currentAccountPicture: CircleAvatar(
-                    backgroundColor: Colors.redAccent,
+                    backgroundColor: Colors.orange[400],
                     child: Text('T'),
                   ),
                 ),
@@ -293,7 +293,7 @@ class _OnBoardingState extends State<OnBoarding> {
 
 
   Future<List> getData() async {
-    String myUrl = 'https://jsonplaceholder.typicode.com/users';
+    String myUrl = 'https://karapp.000webhostapp.com/api/apiList';
     http.Response response = await http.get(myUrl);
     return json.decode(response.body);
   }
@@ -349,11 +349,11 @@ class _OnBoardingState extends State<OnBoarding> {
                                     radius: 50.0,
                                   ),
                                   title: Text(
-                                    content[position]['name'],
+                                    '${content[position]['id']}',
                                     style: TextStyle(fontSize: 20.0),
                                   ),
                                   subtitle: Text(
-                                    content[position]['company']['name'],
+                                    content[position]['pname'],
                                     style: TextStyle(fontSize: 18.0),
                                   ),
                                 ),
@@ -365,18 +365,18 @@ class _OnBoardingState extends State<OnBoarding> {
                                 child: new ListTile(
 
                                   title: Text(
-                                    '${content[position]['address']['city']}',
+                                    '${content[position]['description']}',
                                     style: TextStyle(
                                       fontSize: MediaQuery.of(context).size.width /20,
                                     ),
 
                                   ),
-                                  subtitle: Text(
-                                    content[position]['phone'],
-                                    style: TextStyle(
-                                      fontSize: MediaQuery.of(context).size.width /20,
-                                    ),
-                                  ),
+//                                  subtitle: Text(
+//                                    content[position]['phone'],
+//                                    style: TextStyle(
+//                                      fontSize: MediaQuery.of(context).size.width /20,
+//                                    ),
+//                                  ),
                                   trailing: Icon(Icons.phone),
                                 ),
                               ),

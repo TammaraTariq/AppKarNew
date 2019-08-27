@@ -16,7 +16,7 @@ class NewKar extends StatelessWidget{
     return new MaterialApp(
       theme: new ThemeData(primaryColor: Colors.blue[400]),
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: OnBoarding(),
       title: 'AppKar',
       routes: <String , WidgetBuilder>{
         '/OnBoarding' : (BuildContext context) => new OnBoarding(),
